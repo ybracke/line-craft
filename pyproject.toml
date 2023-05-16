@@ -1,0 +1,26 @@
+[project]
+name = "line_craft"
+version = "0.1.0"
+description = "A simple toolkit for creating modified versions of text-based files"
+authors = [
+  { name = "Yannic Bracke (BBAW)", email = "yannic.bracke@bbaw.de" },
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3.8+",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ybracke/line-craft"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+ignore_missing_imports = true

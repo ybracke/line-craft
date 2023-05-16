@@ -1,0 +1,5 @@
+{"numeric_property": 10, "textual_property": "apples", "boolean_property": false}
+{"numeric_property": 2, "textual_property": "oranges", "boolean_property": true}
+{"numeric_property": 3, "textual_property": "angels", "boolean_property": true}
+{"numeric_property": 5, "textual_property": "alpha", "boolean_property": true}
+{"numeric_property": 18, "textual_property": "beta", "boolean_property": false}
