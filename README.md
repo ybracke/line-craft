@@ -8,22 +8,54 @@ A simple toolkit for creating modified versions of text-based files. Changes are
 
 ## Installation
 
-TODO
-
-
-## Requirements
-
-Python3.8+
-
-Set up virtual environment and install dependencies like this:
+Required: Python3.8+
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate && pip install --upgrade pip
+# Set up virtual environemnt (recommended)
+$ python3 -m venv .venv && source .venv/bin/activate && pip install --upgrade pip
+$ pip install git+ssh://git@github.com/ybracke/line-craft.git
+```
+
+For developping, install dev-requirements:
+
+```bash
 pip install -r requirements-dev.txt
-pip install -r requirements.txt
 ```
 
 
 ## Usage
 
-TODO
+### Python package
+
+Example:
+
+```python
+import line_craft
+
+infile = "example01.txt"
+outfile = "example01.filtered.txt"
+
+# condition
+def longer_than_10_chars(line):
+    return len(line) > 10
+
+filter_lines(infile, outfile, longer_than_10_chars)
+```
+
+### Command-line usage
+
+After installation, `line-craft` is available as a command line tool. As of now,
+you can only use the `sample` function via this CLI. 
+
+```bash
+$ line-craft --help
+# alternatively
+$ python3 -m line_craft --help
+```
+
+Example:
+
+```bash
+$ line-craft --out example01.rand-4.jsonl sample -n 4 example01.jsonl 
+```
+

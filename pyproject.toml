@@ -22,5 +22,8 @@ dependencies = [
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
+[project.scripts]
+line-craft = "line_craft.cli:main"
+
 [tool.mypy]
 ignore_missing_imports = true
